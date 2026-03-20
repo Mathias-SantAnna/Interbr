@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Django
+*.sqlite3
+media/
+static_collected/
+
+# Node
+node_modules/
+.next/
+.vercel/
+npm-debug.log*
+
+# Env files — never commit these
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cursor / VS Code
+.cursor/
+.vscode/settings.json
