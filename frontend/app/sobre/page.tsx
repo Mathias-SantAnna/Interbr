@@ -46,7 +46,7 @@ export default function SobrePage() {
             <div key={v.title} className="flex items-start gap-4 rounded-xl border border-gray-100 bg-white p-4 shadow-sm">
               <div className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                  <path d="M2 6.5l2.5 2.5 5.5-5.5" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 6.5l2.5 2.5 5.5-5.5" stroke="#1e3a8a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <span className="text-sm text-gray-700"><strong className="text-gray-900">{v.title}:</strong> {v.desc}</span>

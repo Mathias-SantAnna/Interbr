@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HeroBanner } from "@/components/storefront/hero-banner";
 import { ProductCard } from "@/components/storefront/product-card";
 import { cookies } from "next/headers";
 import { getCatalogCategories, getFeaturedProducts } from "@/lib/catalog-api";
@@ -11,34 +12,8 @@ export default async function Home() {
 
   return (
     <div className="space-y-16">
-      {/* Hero */}
-      <section className="rounded-2xl border border-gray-100 bg-white px-8 py-14 md:px-16 md:py-20 text-center shadow-sm">
-        <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary inline-block" />
-          Interbrasil Distribuidora
-        </p>
-        <h1 className="mx-auto max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-gray-900 md:text-5xl">
-          Equipamentos florestais, solar e EPI com entrega rápida
-        </h1>
-        <p className="mx-auto mt-5 max-w-xl text-base text-gray-500 md:text-lg">
-          Catálogo online para distribuidores e revendedores. Preços por tabela, pedidos em minutos,
-          NF-e automática após pagamento.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link
-            href="/catalog"
-            className="inline-flex h-11 items-center rounded-xl bg-primary px-7 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 transition"
-          >
-            Ver catálogo completo
-          </Link>
-          <Link
-            href="/register"
-            className="inline-flex h-11 items-center rounded-xl border border-gray-200 bg-white px-7 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition"
-          >
-            Criar conta grátis
-          </Link>
-        </div>
-      </section>
+      {/* Hero — rotating banner */}
+      <HeroBanner />
 
       {/* Stats strip */}
       <div className="grid grid-cols-3 gap-4">

@@ -10,7 +10,7 @@ const TIER_CFG: Record<string, { bg: string; color: string; label: string }> = {
   silver:   { bg: "#f8fafc", color: "#475569", label: "Prata" },
   gold:     { bg: "#fefce8", color: "#a16207", label: "Ouro" },
   platinum: { bg: "#faf5ff", color: "#7e22ce", label: "Platina" },
-  distribuidor: { bg: "#f0fdf4", color: "#15803d", label: "Distribuidor" },
+  distribuidor: { bg: "#f0fdf4", color: "#1e3177", label: "Distribuidor" },
   revendedor:   { bg: "#eff6ff", color: "#1d4ed8", label: "Revendedor" },
   consumidor:   { bg: "#fffbeb", color: "#b45309", label: "Consumidor Final" },
 };

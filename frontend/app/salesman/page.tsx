@@ -77,7 +77,7 @@ export default function SalesmanDashboard() {
         {[
           { label: "Clientes ativos",    value: clients.filter((c) => c.is_active).length,      color: "#111827" },
           { label: "Pedidos pendentes",  value: pendingOrders.length,                           color: "#d97706" },
-          { label: "Total em pedidos",   value: fmt(totalRevenue),                              color: "#16a34a" },
+          { label: "Total em pedidos",   value: fmt(totalRevenue),                              color: "#1e3a8a" },
         ].map((s, i) => (
           <div key={i} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
             <p className="text-xs font-medium uppercase tracking-wider text-gray-400">{s.label}</p>

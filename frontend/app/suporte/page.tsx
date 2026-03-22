@@ -81,7 +81,7 @@ export default function SuportePage() {
         {sent ? (
           <div className="rounded-xl border border-green-200 bg-green-50 p-6 text-center space-y-2">
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1e3a8a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </div>
             <p className="font-semibold text-green-800">Mensagem enviada com sucesso!</p>
             <p className="text-sm text-green-700">Retornaremos para {form.email} em breve.</p>

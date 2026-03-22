@@ -11,8 +11,8 @@ import {
 
 // ── Design tokens (light theme — InterBR design system) ─────────────────────
 const DS = {
-  green:      "#16a34a",
-  greenDark:  "#15803d",
+  green:      "#1e3a8a",
+  greenDark:  "#1e3177",
   greenLight: "#f0fdf4",
   greenBorder:"#bbf7d0",
   white:      "#ffffff",
@@ -30,7 +30,7 @@ const STATUS_CFG: Record<string, { label: string; bg: string; color: string; dot
   paid:            { label: "Pago",                 bg: "#eff6ff", color: "#1e40af", dot: "#3b82f6" },
   processing:      { label: "Em processamento",     bg: "#f5f3ff", color: "#5b21b6", dot: "#7c3aed" },
   shipped:         { label: "Enviado",              bg: "#f0f9ff", color: "#075985", dot: "#0ea5e9" },
-  delivered:       { label: "Entregue",             bg: "#f0fdf4", color: "#14532d", dot: "#16a34a" },
+  delivered:       { label: "Entregue",             bg: "#f0fdf4", color: "#14532d", dot: "#1e3a8a" },
   invoiced:        { label: "Faturado",             bg: "#f0fdf4", color: "#166534", dot: "#22c55e" },
   cancelled:       { label: "Cancelado",            bg: "#fef2f2", color: "#991b1b", dot: "#ef4444" },
 };
@@ -62,12 +62,12 @@ function NFeBadge() {
   return (
     <span style={{
       display: "inline-flex", alignItems: "center", gap: 4,
-      background: DS.greenLight, color: "#15803d",
+      background: DS.greenLight, color: "#1e3177",
       fontSize: 11, fontWeight: 600, padding: "3px 9px",
       borderRadius: 99, border: `1px solid ${DS.greenBorder}`, whiteSpace: "nowrap",
     }}>
       <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-        <path d="M2 6.5l2.5 2.5 5.5-5.5" stroke="#15803d" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M2 6.5l2.5 2.5 5.5-5.5" stroke="#1e3177" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
       NF-e emitida
     </span>

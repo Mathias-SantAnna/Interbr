@@ -56,18 +56,18 @@
   --card-foreground: oklch(0.13 0.011 252);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.011 252);
-  --primary: oklch(0.527 0.178 148.93); /* #16a34a — InterBR green */
-  --primary-foreground: oklch(1 0 0);   /* white on green */
+  --primary: oklch(0.379 0.196 264.4);  /* #1e3a8a — InterBR blue */
+  --primary-foreground: oklch(1 0 0);   /* white on blue */
   --secondary: oklch(0.97 0 0);         /* #f9fafb */
   --secondary-foreground: oklch(0.13 0.011 252);
   --muted: oklch(0.97 0 0);             /* #f3f4f6 */
   --muted-foreground: oklch(0.47 0.015 252); /* #6b7280 */
-  --accent: oklch(0.96 0.01 148);       /* #f0fdf4 — green tint */
-  --accent-foreground: oklch(0.3 0.1 148); /* dark green */
+  --accent: oklch(0.96 0.01 264);       /* #eff6ff — blue tint */
+  --accent-foreground: oklch(0.3 0.1 264); /* dark blue */
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.008 252);      /* #e5e7eb */
   --input: oklch(0.92 0.008 252);
-  --ring: oklch(0.527 0.178 148.93);    /* green ring */
+  --ring: oklch(0.379 0.196 264.4);     /* blue ring */
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -131,10 +131,10 @@
 }
 /* ── InterBR Design System ──────────────────────────────────────────────── */
 :root {
-  --ib-green:        #16a34a;
-  --ib-green-dark:   #15803d;
-  --ib-green-light:  #f0fdf4;
-  --ib-green-ring:   rgba(22,163,74,0.15);
+  --ib-blue:         #1e3a8a;
+  --ib-blue-dark:    #1e3177;
+  --ib-blue-light:   #eff6ff;
+  --ib-blue-ring:    rgba(30,58,138,0.15);
   --ib-gray-50:      #f9fafb;
   --ib-gray-100:     #f3f4f6;
   --ib-gray-200:     #e5e7eb;

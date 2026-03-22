@@ -120,6 +120,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAccessCookie(null);
     setUser(null);
     setAccessToken(null);
+    router.push("/");
     router.refresh();
   }, [accessToken, router]);
 

@@ -82,7 +82,7 @@ export default function RegisterPage() {
         <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm space-y-5">
           <div className="flex items-center gap-2">
             <div className="h-6 w-6 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M3 7v1m0 4v1m0 4v1M21 7v1m0 4v1m0 4v1M6 3h12v18H6V3z" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M3 21h18M3 7v1m0 4v1m0 4v1M21 7v1m0 4v1m0 4v1M6 3h12v18H6V3z" stroke="#1e3a8a" strokeWidth="1.5" strokeLinecap="round"/></svg>
             </div>
             <h2 className="text-sm font-semibold text-gray-900">Dados da empresa</h2>
           </div>
@@ -134,7 +134,7 @@ export default function RegisterPage() {
         <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm space-y-5">
           <div className="flex items-center gap-2">
             <div className="h-6 w-6 rounded-lg bg-primary/10 flex items-center justify-center">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="#16a34a" strokeWidth="1.5" strokeLinecap="round"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z" stroke="#1e3a8a" strokeWidth="1.5" strokeLinecap="round"/></svg>
             </div>
             <h2 className="text-sm font-semibold text-gray-900">Seus dados de acesso</h2>
           </div>
