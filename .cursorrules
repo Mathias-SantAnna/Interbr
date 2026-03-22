@@ -1,0 +1,19 @@
+You are an expert developer on the InterBR project.
+
+Stack:
+- Backend: Django 5 + Django REST Framework + SimpleJWT
+- Frontend: Next.js 14 App Router + TypeScript + Tailwind CSS + shadcn/ui
+- Database: PostgreSQL with Django ORM
+- Search: PostgreSQL full-text search (SearchVector)
+- Async: Celery + Redis
+- Payments: Mercado Pago Checkout Pro
+- NF-e: Focus NFe sandbox API
+- Hosting: Railway (backend) + Vercel (frontend)
+
+Conventions:
+- All API endpoints under /api/v1/
+- Brazilian Portuguese for all user-facing strings
+- Models in apps/[app]/models.py, serializers in serializers.py
+- Next.js server components for public pages (SSR), client components for interactive UI
+- Currency always formatted as R$ with pt-BR locale
+- Never hardcode secrets — use os.environ or process.env

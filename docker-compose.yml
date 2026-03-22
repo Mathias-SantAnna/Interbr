@@ -1,0 +1,93 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# InterBR — Local Development Stack
+# Usage:
+#   docker compose up -d postgres redis   ← start only the data services
+#   python manage.py runserver            ← run Django natively (faster reload)
+#
+# Or run everything in Docker:
+#   docker compose up
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: interbr
+      POSTGRES_USER: interbr
+      POSTGRES_PASSWORD: interbr
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U interbr"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  # ── Optional: run Django in Docker too ─────────────────────────────────────
+  # Comment out if running Django natively for faster reload
+  django:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgres://interbr:interbr@postgres:5432/interbr
+      REDIS_URL: redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - media_files:/app/media
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    profiles:
+      - full  # only starts with: docker compose --profile full up
+
+  celery:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgres://interbr:interbr@postgres:5432/interbr
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - redis
+      - postgres
+    command: celery -A config worker -l info --concurrency=2
+    profiles:
+      - full
+
+volumes:
+  pgdata:
+  redisdata:
+  media_files:
