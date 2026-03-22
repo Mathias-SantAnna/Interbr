@@ -285,15 +285,6 @@ npm install
 npm run dev
 ```
 
-### Demo Accounts
-
-After running `create_superuser_demo`:
-
-| Role | Email | Password |
-|------|-------|----------|
-| Admin | admin@interbr.com | admin123 |
-| Salesman | vendedor@interbr.com | vendedor123 |
-| Client | cliente@empresa.com | cliente123 |
 
 ---
 
@@ -389,11 +380,6 @@ vercel --prod
 - [ ] Inventory management with low-stock alerts
 - [ ] B2B credit line management with automatic limit checks
 
----
-
-## 🤝 Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
@@ -405,8 +391,6 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 <div align="center">
 
-Built with ❤️ for **Interbrasil Distribuidora Ltda** — Brasília, Brasil
-
-**0800-703-4156** · contato@interbrasil.com.br
+Built with ❤️ for **Interbrasil Distribuidora Ltda** 
 
 </div>
